@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"todo_app/config"
+	"todo_app/app/models"
 )
 
 func main() {
-	fmt.Println(config.Config.Port)
-	fmt.Println(config.Config.SQLDriver)
-	fmt.Println(config.Config.DbName)
-	fmt.Println(config.Config.LogFile)
+	fmt.Println(models.Db)
 
-	log.Println("test")
+	u := &models.User{}
+	u.Name = "test"
+	u.Email = "example@a.com"
+	u.PassWord = "test"
+	fmt.Println(u)
+
+	u.CreateUser()
 }

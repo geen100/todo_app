@@ -1,1 +1,5 @@
 2024/08/23 22:48:37 main.go:15: test
+2024/08/24 09:52:27 users.go:33: no such table: users
+2024/08/24 09:54:06 users.go:33: table users has no column named create_at
+2024/08/24 09:58:31 users.go:33: table users has no column named create_at
+2024/08/26 09:56:18 users.go:33: near "values": syntax error
