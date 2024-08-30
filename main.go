@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"todo_app/app/controllers"
+	"todo_app/app/models"
+)
 
 func main() {
-	fmt.Println("test")
+	fmt.Println(models.Db)
+	controllers.StartMainServer()
 }
