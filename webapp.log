@@ -1,10 +1,1 @@
-2024/08/23 22:48:37 main.go:15: test
-2024/08/24 09:52:27 users.go:33: no such table: users
-2024/08/24 09:54:06 users.go:33: table users has no column named create_at
-2024/08/24 09:58:31 users.go:33: table users has no column named create_at
-2024/08/26 09:56:18 users.go:33: near "values": syntax error
-2024/08/29 11:28:09 users.go:58: near "where": syntax error
-2024/08/29 12:08:38 todos.go:23: table todos has no column named usr_id
-2024/08/29 12:10:14 todos.go:23: table todos has no column named usr_id
-2024/08/29 12:10:25 todos.go:23: table todos has no column named usr_id
-2024/08/29 15:11:59 todos.go:56: no such column: created_ad
+
