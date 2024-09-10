@@ -1,1 +1,6 @@
-
+2024/09/10 14:30:30 route_auth.go:52: sql: no rows in result set
+2024/09/10 14:30:30 server.go:3418: http: superfluous response.WriteHeader call from todo_app/app/controllers.authenticate (route_auth.go:68)
+2024/09/10 14:30:37 route_auth.go:52: sql: no rows in result set
+2024/09/10 14:30:37 server.go:3418: http: superfluous response.WriteHeader call from todo_app/app/controllers.authenticate (route_auth.go:68)
+2024/09/10 17:43:47 route_auth.go:52: sql: no rows in result set
+2024/09/10 17:43:47 server.go:3418: http: superfluous response.WriteHeader call from todo_app/app/controllers.authenticate (route_auth.go:68)

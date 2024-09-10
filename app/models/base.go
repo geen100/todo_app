@@ -12,12 +12,13 @@ import (
 )
 
 var Db *sql.DB
+
 var err error
 
 const (
 	tableNameUser    = "users"
-	tableNametodo    = "todos"
-	tableNameSession = "Sessions"
+	tableNameTodo    = "todos"
+	tableNameSession = "sessions"
 )
 
 func init() {
@@ -27,34 +28,34 @@ func init() {
 	}
 
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	uuid STRING NOT NULL UNIQUE,
-	name STRING,
-	email STRING,
-	password STRING,
-	created_at DATETIME)`, tableNameUser)
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		name STRING,
+		email STRING,
+		password STRING,
+		created_at DATETIME)`, tableNameUser)
 
 	Db.Exec(cmdU)
 
 	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	content TEXT,
-	user_id INTEGER,
-	created_at DATETIME)`, tableNametodo)
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		content TEXT,
+		user_id INTEGER,
+		created_at DATETIME)`, tableNameTodo)
 
 	Db.Exec(cmdT)
 
 	cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	uuid STRING NOT NULL UNIQUE,
-	email STRING,
-	user_id INTEGER,
-	created_at DATETIME)`, tableNameSession)
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		email STRING,
+		user_id INTEGER,
+		created_at DATETIME)`, tableNameSession)
 
 	Db.Exec(cmdS)
 }
 
-func CreateUUID() (uuidobj uuid.UUID) {
+func createUUID() (uuidobj uuid.UUID) {
 	uuidobj, _ = uuid.NewUUID()
 	return uuidobj
 }
